@@ -18,19 +18,12 @@ export default function Landing() {
             <span className="text-xl font-bold text-white">{APP_TITLE}</span>
           </div>
           <div className="flex gap-4">
-            <Link href="/marketplace">
+            <a href="https://instagram.com/osas.codes" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" className="text-white hover:text-purple-400">Marketplace</Button>
-            </Link>
-            {isAuthenticated && (
-              <Link href="/dashboard">
-                <Button className="bg-purple-600 hover:bg-purple-700">Dashboard</Button>
-              </Link>
-            )}
-            {!isAuthenticated && (
-              <a href={getLoginUrl()}>
-                <Button className="bg-purple-600 hover:bg-purple-700">Sign In</Button>
-              </a>
-            )}
+            </a>
+            <a href="https://instagram.com/osas.codes" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-purple-600 hover:bg-purple-700">Get Started</Button>
+            </a>
           </div>
         </div>
       </nav>
@@ -46,12 +39,12 @@ export default function Landing() {
             real-time messaging, and verified portfolios all in one platform.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/marketplace">
+            <a href="https://instagram.com/osas.codes" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-lg px-8">
                 Find Creatives
               </Button>
-            </Link>
-            <a href={getLoginUrl()}>
+            </a>
+            <a href="https://instagram.com/osas.codes" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="text-white border-purple-500 hover:bg-purple-900/30 text-lg px-8">
                 Become a Creative
               </Button>
@@ -185,12 +178,12 @@ export default function Landing() {
         <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
         <p className="text-xl text-gray-300 mb-8">Join thousands of creatives and clients already using CreateSpace</p>
         <div className="flex gap-4 justify-center flex-wrap">
-          <Link href="/marketplace">
+          <a href="https://instagram.com/osas.codes" target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-lg px-8">
               Browse Creatives
             </Button>
-          </Link>
-          <a href={getLoginUrl()}>
+          </a>
+          <a href="https://instagram.com/osas.codes" target="_blank" rel="noopener noreferrer">
             <Button size="lg" variant="outline" className="text-white border-purple-500 hover:bg-purple-900/30 text-lg px-8">
               Sign Up Now
             </Button>
@@ -209,25 +202,25 @@ export default function Landing() {
             <div>
               <p className="font-bold text-white mb-4">For Clients</p>
               <ul className="text-gray-400 text-sm space-y-2">
-                <li><Link href="/marketplace" className="hover:text-purple-400">Browse Creatives</Link></li>
-                <li><a href="#" className="hover:text-purple-400">How It Works</a></li>
-                <li><a href="#" className="hover:text-purple-400">Pricing</a></li>
+                <li><a href="https://instagram.com/osas.codes" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">Browse Creatives</a></li>
+                <li><a href="https://instagram.com/osas.codes" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">How It Works</a></li>
+                <li><a href="https://instagram.com/osas.codes" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">Pricing</a></li>
               </ul>
             </div>
             <div>
               <p className="font-bold text-white mb-4">For Creatives</p>
               <ul className="text-gray-400 text-sm space-y-2">
-                <li><a href={getLoginUrl()} className="hover:text-purple-400">Join Us</a></li>
-                <li><a href="#" className="hover:text-purple-400">Grow Your Business</a></li>
-                <li><a href="#" className="hover:text-purple-400">Resources</a></li>
+                <li><a href="https://instagram.com/osas.codes" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">Join Us</a></li>
+                <li><a href="https://instagram.com/osas.codes" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">Grow Your Business</a></li>
+                <li><a href="https://instagram.com/osas.codes" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">Resources</a></li>
               </ul>
             </div>
             <div>
               <p className="font-bold text-white mb-4">Company</p>
               <ul className="text-gray-400 text-sm space-y-2">
-                <li><a href="#" className="hover:text-purple-400">About</a></li>
-                <li><a href="#" className="hover:text-purple-400">Privacy</a></li>
-                <li><a href="#" className="hover:text-purple-400">Terms</a></li>
+                <li><a href="https://instagram.com/osas.codes" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">About</a></li>
+                <li><a href="https://instagram.com/osas.codes" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">Privacy</a></li>
+                <li><a href="https://instagram.com/osas.codes" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">Terms</a></li>
               </ul>
             </div>
           </div>
