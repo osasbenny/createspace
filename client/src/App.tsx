@@ -8,6 +8,8 @@ import Landing from "./pages/Landing";
 import Marketplace from "./pages/Marketplace";
 import CreativeProfile from "./pages/CreativeProfile";
 import ClientDashboard from "./pages/ClientDashboard";
+import ReviewPage from "./pages/ReviewPage";
+import GigBoard from "./pages/GigBoard";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -17,6 +19,8 @@ function Router() {
       <Route path="/marketplace" component={Marketplace} />
       <Route path="/creative/:id" component={CreativeProfile} />
       <Route path="/dashboard" component={ClientDashboard} />
+      <Route path="/review/:bookingId" component={ReviewPage} />
+      <Route path="/gig-board" component={GigBoard} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
