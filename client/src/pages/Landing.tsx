@@ -18,24 +18,18 @@ export default function Landing() {
             <span className="text-xl font-bold text-white">{APP_TITLE}</span>
           </div>
           <div className="flex gap-4">
-            {isAuthenticated ? (
-              <>
-                <Link href="/marketplace">
-                  <Button variant="ghost" className="text-white hover:text-purple-400">Marketplace</Button>
-                </Link>
-                <Link href="/dashboard">
-                  <Button className="bg-purple-600 hover:bg-purple-700">Dashboard</Button>
-                </Link>
-              </>
-            ) : (
-              <>
-                <a href={getLoginUrl()}>
-                  <Button variant="ghost" className="text-white hover:text-purple-400">Sign In</Button>
-                </a>
-                <a href={getLoginUrl()}>
-                  <Button className="bg-purple-600 hover:bg-purple-700">Get Started</Button>
-                </a>
-              </>
+            <Link href="/marketplace">
+              <Button variant="ghost" className="text-white hover:text-purple-400">Marketplace</Button>
+            </Link>
+            {isAuthenticated && (
+              <Link href="/dashboard">
+                <Button className="bg-purple-600 hover:bg-purple-700">Dashboard</Button>
+              </Link>
+            )}
+            {!isAuthenticated && (
+              <a href={getLoginUrl()}>
+                <Button className="bg-purple-600 hover:bg-purple-700">Sign In</Button>
+              </a>
             )}
           </div>
         </div>
@@ -52,11 +46,11 @@ export default function Landing() {
             real-time messaging, and verified portfolios all in one platform.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <a href={getLoginUrl()}>
+            <Link href="/marketplace">
               <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-lg px-8">
                 Find Creatives
               </Button>
-            </a>
+            </Link>
             <a href={getLoginUrl()}>
               <Button size="lg" variant="outline" className="text-white border-purple-500 hover:bg-purple-900/30 text-lg px-8">
                 Become a Creative
@@ -191,16 +185,16 @@ export default function Landing() {
         <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
         <p className="text-xl text-gray-300 mb-8">Join thousands of creatives and clients already using CreateSpace</p>
         <div className="flex gap-4 justify-center flex-wrap">
-          <a href={getLoginUrl()}>
-            <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-lg px-8">
-              Sign Up Now
-            </Button>
-          </a>
           <Link href="/marketplace">
-            <Button size="lg" variant="outline" className="text-white border-purple-500 hover:bg-purple-900/30 text-lg px-8">
+            <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-lg px-8">
               Browse Creatives
             </Button>
           </Link>
+          <a href={getLoginUrl()}>
+            <Button size="lg" variant="outline" className="text-white border-purple-500 hover:bg-purple-900/30 text-lg px-8">
+              Sign Up Now
+            </Button>
+          </a>
         </div>
       </section>
 
@@ -215,7 +209,7 @@ export default function Landing() {
             <div>
               <p className="font-bold text-white mb-4">For Clients</p>
               <ul className="text-gray-400 text-sm space-y-2">
-                <li><a href="#" className="hover:text-purple-400">Browse Creatives</a></li>
+                <li><Link href="/marketplace" className="hover:text-purple-400">Browse Creatives</Link></li>
                 <li><a href="#" className="hover:text-purple-400">How It Works</a></li>
                 <li><a href="#" className="hover:text-purple-400">Pricing</a></li>
               </ul>
@@ -223,7 +217,7 @@ export default function Landing() {
             <div>
               <p className="font-bold text-white mb-4">For Creatives</p>
               <ul className="text-gray-400 text-sm space-y-2">
-                <li><a href="#" className="hover:text-purple-400">Join Us</a></li>
+                <li><a href={getLoginUrl()} className="hover:text-purple-400">Join Us</a></li>
                 <li><a href="#" className="hover:text-purple-400">Grow Your Business</a></li>
                 <li><a href="#" className="hover:text-purple-400">Resources</a></li>
               </ul>
