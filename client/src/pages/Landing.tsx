@@ -232,7 +232,8 @@ export default function Landing() {
             </div>
           </div>
           <div className="border-t border-purple-500/20 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 {APP_TITLE}. All rights reserved.</p>
+            <p>&copy; 2025 {APP_TITLE}. All rights reserved.</p>
+            <p className="text-sm mt-2">Designed by <a href="https://instagram.com/osas.codes" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Osagie Bernard E</a></p>
           </div>
         </div>
       </footer>
